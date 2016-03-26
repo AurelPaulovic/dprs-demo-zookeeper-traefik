@@ -9,4 +9,6 @@ RUN apk add --update curl \
 
 COPY src/zoo.cfg /opt/zookeeper/conf/zoo.cfg
 
+USER nobody
+
 CMD ["/opt/zookeeper/bin/zkServer.sh", "start-foreground"]
